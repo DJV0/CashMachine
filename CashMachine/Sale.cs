@@ -20,5 +20,6 @@ namespace CashMachine
             Number = number;
             Cost = cost;
         }
+        public override string ToString() => $"[Number: {this.Number}, Cost: {this.Cost}]";
     }
 }

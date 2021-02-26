@@ -11,6 +11,8 @@ namespace CashMachine
         public string Title { get; set; }
         public float Cost { get; set; }
 
+        static Random rnd = new Random();
+
         public List<Sale> SaleList { get; } = new List<Sale>();
 
         public Product()
@@ -23,13 +25,24 @@ namespace CashMachine
             Cost = cost;
         }
 
-        public override string ToString() => $"Title: {this.Title}, Cost: {this.Cost}";
+        public override string ToString()
+        {
+            string product = $"Title: { this.Title}, Cost: { this.Cost},";
+            foreach (var sale in this.SaleList)
+            {
+                product += sale.ToString() + " ";
+            }
+            return product;
+        }
         public void AddSaleRandom(int lBound, int rBound, float salePersent)
         {
-            Random rnd = new Random();
             if(rBound>lBound && salePersent>0 && salePersent < 1)
             {
-                SaleList.Add(new Sale(rnd.Next(lBound, rBound), this.Cost - this.Cost * salePersent));
+                Sale newSale = new Sale(rnd.Next(lBound, rBound), this.Cost - this.Cost * salePersent);
+                if (!SaleList.Contains(newSale))
+                {
+                    SaleList.Add(newSale);
+                }
             }
         }
         public void AddSale(Sale sale)

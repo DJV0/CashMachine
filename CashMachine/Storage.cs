@@ -109,20 +109,22 @@ namespace CashMachine
         {
             Random rnd = new Random();
             float salePersent1 = 0.05f, salePersent2 = 0.1f;
-            ArrayList rndProductIndex = new ArrayList { rnd.Next(0, productsList.Count), rnd.Next(0, productsList.Count), rnd.Next(0, productsList.Count) };
+            int lBound1 = 2, rBound1 = 6, lBound2 = 8, rBound2 = 13;
+            ArrayList rndList = new ArrayList
+            {
+                rnd.Next(0, productsList.Count),
+                rnd.Next(0, productsList.Count),
+                rnd.Next(0, productsList.Count)
+            };
 
             foreach (Product product in productsList)
             {
-                sales.Add((product, rnd.Next(2, 6), product.Cost - product.Cost * salePersent1));
-                if(rndProductIndex.Contains(productsList.FindIndex(p => p.Equals(product))))
-                {
-                    sales.Add((product, rnd.Next(8, 13), product.Cost - product.Cost * salePersent2));
-                }
+                product.AddSaleRandom(lBound1, rBound1, salePersent1);
             }
-            //foreach (var item in sales)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            foreach (var item in rndList)
+            {
+                productsList[(int)item].AddSaleRandom(lBound2, rBound2, salePersent2);
+            }
         }
         #endregion
 
