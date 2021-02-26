@@ -63,6 +63,7 @@
       <DependentUpon>ReceiptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ReceiptItem.cs" />
+    <Compile Include="Sale.cs" />
     <Compile Include="Storage.cs" />
     <Compile Include="StorageForm.cs">
       <SubType>Form</SubType>
