@@ -32,13 +32,9 @@ namespace CashMachine
         private void MainForm_Load(object sender, EventArgs e)
         {
             Console.WriteLine("----- Sales -----");
-            foreach (var item in Storage.Sales.GroupBy(x => x.Item1))
+            foreach (var item in Storage.ProductsList)
             {
-                foreach (var i in item)
-                {
-                    Console.WriteLine(i);
-                }
-                Console.WriteLine("****");
+                Console.WriteLine(item);
             }
 
             

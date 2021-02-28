@@ -42,7 +42,7 @@ namespace CashMachine
             // 
             // AddProductBtn
             // 
-            this.AddProductBtn.Location = new System.Drawing.Point(12, 12);
+            this.AddProductBtn.Location = new System.Drawing.Point(12, 359);
             this.AddProductBtn.Name = "AddProductBtn";
             this.AddProductBtn.Size = new System.Drawing.Size(170, 32);
             this.AddProductBtn.TabIndex = 0;
@@ -52,7 +52,7 @@ namespace CashMachine
             // 
             // OkBtn
             // 
-            this.OkBtn.Location = new System.Drawing.Point(155, 406);
+            this.OkBtn.Location = new System.Drawing.Point(314, 359);
             this.OkBtn.Name = "OkBtn";
             this.OkBtn.Size = new System.Drawing.Size(75, 32);
             this.OkBtn.TabIndex = 1;
@@ -67,9 +67,9 @@ namespace CashMachine
             this.number,
             this.price});
             this.ReceiptListView.HideSelection = false;
-            this.ReceiptListView.Location = new System.Drawing.Point(12, 50);
+            this.ReceiptListView.Location = new System.Drawing.Point(12, 12);
             this.ReceiptListView.Name = "ReceiptListView";
-            this.ReceiptListView.Size = new System.Drawing.Size(377, 287);
+            this.ReceiptListView.Size = new System.Drawing.Size(382, 287);
             this.ReceiptListView.TabIndex = 2;
             this.ReceiptListView.UseCompatibleStateImageBehavior = false;
             this.ReceiptListView.View = System.Windows.Forms.View.Details;
@@ -92,17 +92,18 @@ namespace CashMachine
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 361);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(9, 319);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 17);
+            this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Общая сумма:";
             // 
             // TotalLabel
             // 
             this.TotalLabel.AutoSize = true;
-            this.TotalLabel.Location = new System.Drawing.Point(132, 361);
+            this.TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TotalLabel.Location = new System.Drawing.Point(117, 319);
             this.TotalLabel.Name = "TotalLabel";
             this.TotalLabel.Size = new System.Drawing.Size(16, 17);
             this.TotalLabel.TabIndex = 4;
@@ -111,7 +112,7 @@ namespace CashMachine
             // TotalSaleCheckBox
             // 
             this.TotalSaleCheckBox.AutoSize = true;
-            this.TotalSaleCheckBox.Location = new System.Drawing.Point(284, 357);
+            this.TotalSaleCheckBox.Location = new System.Drawing.Point(284, 315);
             this.TotalSaleCheckBox.Name = "TotalSaleCheckBox";
             this.TotalSaleCheckBox.Size = new System.Drawing.Size(105, 21);
             this.TotalSaleCheckBox.TabIndex = 5;
@@ -123,7 +124,7 @@ namespace CashMachine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 450);
+            this.ClientSize = new System.Drawing.Size(406, 409);
             this.Controls.Add(this.TotalSaleCheckBox);
             this.Controls.Add(this.TotalLabel);
             this.Controls.Add(this.label1);
@@ -131,6 +132,7 @@ namespace CashMachine
             this.Controls.Add(this.OkBtn);
             this.Controls.Add(this.AddProductBtn);
             this.Name = "ReceiptForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receipt";
             this.Load += new System.EventHandler(this.ReceiptForm_Load);
             this.ResumeLayout(false);

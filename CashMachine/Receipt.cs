@@ -57,11 +57,6 @@ namespace CashMachine
                 products.Add(item);
             }
             CalculateTotal();
-            Console.WriteLine("-----------------");
-            foreach (var item in products)
-            {
-                Console.WriteLine(item);
-            }
         }
 
         private void CalculateTotal()

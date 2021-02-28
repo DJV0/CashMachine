@@ -37,11 +37,11 @@ namespace CashMachine
             // 
             // CloseFormBtn
             // 
-            this.CloseFormBtn.Location = new System.Drawing.Point(351, 408);
+            this.CloseFormBtn.Location = new System.Drawing.Point(363, 302);
             this.CloseFormBtn.Name = "CloseFormBtn";
             this.CloseFormBtn.Size = new System.Drawing.Size(92, 30);
             this.CloseFormBtn.TabIndex = 0;
-            this.CloseFormBtn.Text = "Закрыть";
+            this.CloseFormBtn.Text = "ОК";
             this.CloseFormBtn.UseVisualStyleBackColor = true;
             this.CloseFormBtn.Click += new System.EventHandler(this.CloseFormBtn_Click);
             // 
@@ -53,7 +53,7 @@ namespace CashMachine
             this.StorageListView.HideSelection = false;
             this.StorageListView.Location = new System.Drawing.Point(12, 12);
             this.StorageListView.Name = "StorageListView";
-            this.StorageListView.Size = new System.Drawing.Size(776, 368);
+            this.StorageListView.Size = new System.Drawing.Size(788, 271);
             this.StorageListView.TabIndex = 1;
             this.StorageListView.UseCompatibleStateImageBehavior = false;
             this.StorageListView.View = System.Windows.Forms.View.Details;
@@ -73,10 +73,11 @@ namespace CashMachine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(812, 344);
             this.Controls.Add(this.StorageListView);
             this.Controls.Add(this.CloseFormBtn);
             this.Name = "StorageForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StorageForm";
             this.Load += new System.EventHandler(this.StorageForm_Load);
             this.ResumeLayout(false);
