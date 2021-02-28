@@ -96,6 +96,7 @@ namespace CashMachine
 
         private static void GenerateSales()
         {
+
             Random rnd = new Random();
             float salePersent1 = 0.05f, salePersent2 = 0.1f;
             int lBound1 = 2, rBound1 = 6, lBound2 = 8, rBound2 = 13;
