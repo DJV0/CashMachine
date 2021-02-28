@@ -39,10 +39,9 @@ namespace CashMachine
             ReceiptListView.Items.Clear();
             foreach (var item in receipt.Products)
             {
-                ListViewItem listViewItem = new ListViewItem();
-                listViewItem.Text = item.Product.Title.ToString();
-                listViewItem.SubItems.Add((item.Number.ToString()));
-                listViewItem.SubItems.Add((item.Price.ToString()));
+                ListViewItem listViewItem = new ListViewItem(item.Product.Title);
+                listViewItem.SubItems.Add(item.Number.ToString());
+                listViewItem.SubItems.Add(item.Price.ToString());
                 ReceiptListView.Items.Add(listViewItem);
             }
 
