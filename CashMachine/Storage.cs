@@ -11,7 +11,6 @@ namespace CashMachine
     {
         private static List<Product> products;
         private static List<Product> productsList;
-        private static List<(Product, int, float)> sales;
 
         #region Property
         public static List<Product> Products
@@ -29,14 +28,6 @@ namespace CashMachine
             }
         }
 
-        public static List<(Product, int, float)> Sales
-        {
-            get
-            {
-                return sales;
-            }
-        }
-
         public static List<float> ReceiptList { get; set; }
         #endregion
 
@@ -51,7 +42,6 @@ namespace CashMachine
             };
 
             productsList = new List<Product>();
-            sales = new List<(Product, int, float)>();
             ReceiptList = new List<float>();
 
             GenerateProductsList();
@@ -81,12 +71,11 @@ namespace CashMachine
 
         public static void AddSale(Product product, int number, float cost)
         {
-            var sale = (product, number, cost);
-            if (product == null || sales.Contains(sale) || productsList.Contains(product) == false)
+            if (product == null || productsList.Contains(product) == false)
             {
                 return;
             }
-            sales.Add(sale);
+            product.AddSale(new Sale(number, cost));
         }
 
         private static void GenerateProductsList()

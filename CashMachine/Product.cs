@@ -47,7 +47,10 @@ namespace CashMachine
         }
         public void AddSale(Sale sale)
         {
-            SaleList.Add(sale);
+            if (!SaleList.Contains(sale))
+            {
+                SaleList.Add(sale);
+            }
         }
     }
 }

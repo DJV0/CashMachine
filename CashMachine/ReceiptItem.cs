@@ -19,15 +19,14 @@ namespace CashMachine
             {
                 if (value > 0)
                 {
-                    var sales = Storage.Sales.FindAll(sale => sale.Item1.Equals(product));
-                    if(sales != null)
+                    if(product.SaleList != null)
                     {
-                        sales.Sort((s1, s2) => s1.Item2.CompareTo(s2.Item2));
-                        foreach ((Product,int,float) sale in sales)
+                        product.SaleList.Sort((s1, s2) => s1.Number.CompareTo(s2.Number));
+                        foreach (Sale sale in product.SaleList)
                         {
-                            if(value >= sale.Item2)
+                            if(value >= sale.Number)
                             {
-                                price = sale.Item3;
+                                price = sale.Cost;
                             }
                         }
                     }
